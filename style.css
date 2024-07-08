@@ -1,0 +1,70 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* Paleta de cores estáticas */
+    --cinza_escuro: #121212;
+    --cinza_neutro: #333;
+    /* Paleta de cores variáveis (hover etc...) */
+}
+
+body {
+    background-color: var(--cinza_escuro);
+}
+
+header {
+    background-color: var(--cinza_escuro);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.701);
+    margin-bottom: 20px;
+}
+
+header > h1 {
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+
+}
+
+.botoes_escolher_tipo_cabelo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagem-container {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease; /* Transição suave para a transformação */
+}
+
+.imagem-texto {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.727);
+    color: white;
+    padding: 20px;
+    font-size: 1.3em;
+}
+
+.imagem-container:hover img {
+    transform: translateY(5px);
+}
+
+
