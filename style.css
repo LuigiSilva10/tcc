@@ -1,112 +1,81 @@
-/* Define margem zero para todos os elementos e define a fonte padrão */
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
-/* Define as variáveis de cores personalizadas usando :root */
 :root {
     --header_lightmode: #fff;
-    /* Cor do cabeçalho no modo claro */
     --header_darkmode: #1e1e1e;
-    /* Cor do cabeçalho no modo escuro */
     --titulo_h2_darkmode: #fbb040;
     --titulo_h2_lightmode: #333;
     --titulo_h3_darkmode: #fff;
     --titulo_h3_lightmode: #1e1e1e;
     --body: #121212;
-    /* Cor de fundo do corpo da página */
     --config: #ccc;
-    /* Cor do ícone de configurações */
     --dark_mode: #999;
-    /* Cor do ícone do modo escuro */
     --light_mode: #fbb040;
-    /* Cor do ícone do modo claro */
     --li: #fff;
-    /* Cor dos itens de lista */
     --menu-suspenso_dark_li_hover: rgb(45, 44, 44);
-    /* Cor de fundo dos itens de lista no modo escuro */
     --menu-suspenso_light_li_hover: rgb(185, 180, 180);
-    /* Cor de fundo dos itens de lista no modo claro */
-
     --a: #fff;
-    /* Cor dos links */
 }
 
-/* Estilos gerais do corpo da página */
+
 body {
     background-color: var(--body);
-    /* Cor de fundo do corpo da página */
 }
 
-/* Estilos do cabeçalho */
 header {
     background-color: var(--header);
-    /* Cor do cabeçalho */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.701);
-    /* Sombra do cabeçalho */
     margin-bottom: 20px;
-    /* Margem inferior do cabeçalho */
 }
 
-/* Estilos dos ícones no cabeçalho */
 .icones_home {
     font-size: 2em;
-    /* Tamanho dos ícones */
     justify-content: flex-end;
-    /* Alinhamento dos ícones */
     display: flex;
-    /* Exibição dos ícones */
     cursor: pointer;
-    /* Cursor ao passar por cima */
     margin-top: 10px;
-    /* Margem superior dos ícones */
 }
 
-/* Estilos do ícone de configuração */
+
 #config {
     color: var(--config);
-    /* Cor do ícone de configuração */
-    margin-inline: 10px;
-    /* Margem interna do ícone de configuração */
+    margin-right: 20px;
+    margin-top: 20px;
+
 }
 
-/* Efeito de escala ao passar o mouse sobre o ícone de configuração */
+
 #config:hover {
     transform: scale(1.2);
-    /* Escala do ícone ao passar o mouse */
 }
 
-/* Estilos do ícone de modo escuro */
+
 #dark_mode {
     color: var(--dark_mode);
     font-size: 1.1em;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
-/* Efeito de escala ao passar o mouse sobre o ícone de modo escuro */
 #dark_mode:hover {
     cursor: pointer;
-    transform: scale(1.2);
 }
 
-/* Estilos do ícone de modo claro */
+
 #light_mode {
     color: var(--light_mode);
+    margin-left: 10px;
     font-size: 1.1em;  
-    margin-right: 10px;
 }
 
-/* Efeito de escala ao passar o mouse sobre o ícone de modo claro */
+
 #light_mode:hover {
     cursor: pointer;
-    transform: scale(1.2);
 }
 
-
-/* Estilos para o modo claro */
 .light-mode {
-    /* Variáveis de cores ajustadas para o modo claro */
     --header: var(--header_lightmode);
     --body: var(--body);
     --config: var(--config);
@@ -117,73 +86,48 @@ header {
     --li_hover: var(--li_hover);
 }
 
-/* Quando no light mode, altera a cor do hover para preto */
 .light-mode header a:hover {
     border-bottom: 2px solid black;
-    /* Cor do sublinhado ao passar o mouse */
 }
 
-/* Oculta o ícone de modo escuro por padrão */
 #dark_mode {
     display: none;
-    /* Ícone de modo escuro oculto por padrão */
 }
 
-/* Estilos do menu */
+
 menu {
     display: flex;
-    /* Exibição do menu */
-    padding: 15px;
-    /* Preenchimento do menu */
+    padding: 5px;
     justify-content: space-between;
-    /* Justificação do conteúdo do menu */
 }
 
-menu a:hover {
-    border-bottom: 2px solid var(--light_mode);
-    /* Cor da borda inferior ao passar o mouse */
-}
 
-/* Estilos do menu suspenso */
 .menu-suspenso {
     position: fixed;
-    /* Posição fixa do menu suspenso */
     top: 0;
-    /* Distância do topo */
     right: -300px;
-    /* Distância da direita */
     width: 300px;
-    /* Largura do menu suspenso */
     height: 100vh;
-    /* Altura do menu suspenso */
     background-color: var(--header_darkmode);
-    /* Cor de fundo do menu suspenso */
     transition: right 0.6s ease;
-    /* Transição ao abrir ou fechar */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
-    /* Sombra do menu suspenso */
     z-index: 10;
-    /* Ordem de empilhamento */
     padding: 20px;
-    /* Preenchimento interno do menu suspenso */
     box-sizing: border-box;
-    /* Modelo de caixa */
 }
 
 #font-size-slider {
     width: 100%;
     display: block;
     margin-top: 30px;
-
 }
+
 
 
 /* Estilos do menu escuro */
 .dark-mode .menu-suspenso {
     background-color: var(--header_darkmode);
-    /* Cor de fundo do menu suspenso no modo escuro */
     color: var(--li);
-    /* Cor do texto do menu suspenso */
 }
 
 .dark-mode label {
@@ -191,118 +135,79 @@ menu a:hover {
 
 }
 
-/* Estilos do menu claro */
 .light-mode .menu-suspenso {
     background-color: var(--header_lightmode);
-    /* Cor de fundo do menu suspenso no modo claro */
     color: var(--li);
-    /* Cor do texto do menu suspenso */
 }
 
-/* Botão de fechar o menu */
+
 #close-menu {
     position: absolute;
-    /* Posição absoluta */
     top: 10px;
-    /* Distância do topo */
     right: 10px;
-    /* Distância da direita */
     background: none;
-    /* Fundo transparente */
     border: none;
-    /* Sem borda */
     color: var(--li);
-    /* Cor do ícone de fechar */
     font-size: 1.2em;
-    /* Tamanho do ícone de fechar */
     cursor: pointer;
-    /* Cursor ao passar por cima */
 }
 
-/* Lista dentro do menu suspenso */
 .menu-suspenso ul {
     list-style: none;
-    /* Estilo da lista */
     padding: 0;
-    /* Preenchimento da lista */
 }
 
-/* Estilos dos itens da lista no menu suspenso */
 .menu-suspenso li {
+    font-weight: bold;
     padding: 10px;
-    /* Preenchimento dos itens da lista */
     border-radius: 10px;
-    /* Raio da borda dos itens da lista */
     margin-bottom: 20px;
-    /* Margem inferior dos itens da lista */
     color: var(--li);
-    /* Cor do texto dos itens da lista */
     font-size: 1.1em;
-    /* Tamanho da fonte dos itens da lista */
-    display: list-item;
-    /* Exibição dos itens da lista */
+    display: flex;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Adiciona transição suave */
 }
 
-/* Estilos dos itens da lista no modo claro ao passar o mouse */
+
 .light-mode .menu-suspenso li:hover {
     background-color: var(--menu-suspenso_light_li_hover);
-    /* Cor de fundo dos itens da lista */
     color: var(--li);
-    /* Cor do texto dos itens da lista */
 }
 
 .light-mode label {
     color: var(--dark_mode);
 }
 
-/* Estilos dos itens da lista ao passar o mouse */
 .menu-suspenso li:hover {
     background-color: var(--menu-suspenso_dark_li_hover);
-    /* Cor de fundo dos itens da lista */
     transform: scale(1.1);
-    /* Aumenta o tamanho ao passar o mouse */
 }
 
-/* Estilos da lista não ordenada */
-ul {
-    margin-top: 22px;
-    /* Margem superior da lista */
-    padding: 0;
-    /* Preenchimento da lista */
-    overflow: hidden;
-    /* Overflow da lista */
+#logo img {
+    margin-left: 5px;
+    margin-top: 5px;
+    max-width: 15%;
+    border-radius: 50%;
 }
 
-/* Estilos dos itens da lista */
 li {
     display: inline-block;
-    /* Exibição dos itens da lista */
     margin-right: 30px;
-    /* Margem direita dos itens da lista */
     color: var(--li);
-    /* Cor do texto dos itens da lista */
     font-size: 1.1em;
-    /* Tamanho da fonte dos itens da lista */
+
 }
 
-/* Efeito de borda inferior ao passar o mouse sobre o item da lista */
 li:hover {
     cursor: pointer;
-    /* Cursor ao passar por cima */
     border-bottom: var(--li_hover);
-    /* Borda inferior ao passar o mouse */
+
 }
 
-/* Estilos dos links */
 a {
     color: var(--a);
-    /* Cor dos links */
     text-decoration: none;
-    /* Decoração de texto dos links */
     font-weight: bold;
-    /* Peso da fonte dos links */
 }
 
 
@@ -328,7 +233,6 @@ a {
     height: 100%;
     object-fit: cover;
     transition: transform 0.40s ease;
-    /* Transição suave para a transformação */
 }
 
 .imagem-texto {
@@ -379,14 +283,6 @@ a {
     color: var(--titulo_h2_lightmode);
 }
 
-
-.card {
-    background-color: #333;
-    display: flex;
-    margin: 20px;
-    border-radius: 10px;
-}
-
 .imagem-container {
     position: relative;
     width: 150%;
@@ -408,42 +304,12 @@ a {
     object-fit: cover;
 }
 
-.caption_text p {
-    line-height: 25px;
-    pointer-events: a;
-    text-align: justify;
-    text-rendering: optimizeLegibility;
-    margin: 20px;
-    color: white;
-    text-indent: 30px;
-}
-
-.caption_text p a {
-    justify-items: auto;
-    cursor: pointer;
-}
-
-.caption_text p a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos dos cartões */
-.card:nth-of-type(2),
-/* Segunda carta */
-.card:nth-of-type(4) {
-    /* Quarta carta */
-    flex-direction: row-reverse;
-    /* Inverte a direção dos elementos dentro do cartão */
-}
-
 
 /*formatação para pagina sobre*/
 
 .titulo p {
     font-size: 1.5em;
-    /* Tamanho da fonte */
     margin-top: 20px;
-    /* Margem superior */
     padding-left: 350px;
     padding-right: 350px;
     color: var(--titulo_h3_darkmode);
@@ -457,33 +323,12 @@ a {
     color: var(--titulo_h3_lightmode);
 }
 
-
-/* Estilos para telas menores que 768px */
-@media only screen and (max-width: 767px) {
-    .image-container {
-        width: calc(50% - 20px);
-        /* 50% de largura para cada imagem com espaço entre elas */
-    }
-}
-
-/* Estilos para telas entre 768px e 1024px */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .image-container {
-        width: calc(33.33% - 20px);
-        /* 33.33% de largura para cada imagem com espaço entre elas */
-    }
-}
-
-
 /* Estilos para telas menores que 768px */
 @media only screen and (max-width: 767px) {
     .titulo h3 {
         font-size: 1.2em;
-        /* Reduzindo o tamanho da fonte */
         padding-left: 20px;
-        /* Ajuste do espaçamento à esquerda */
         padding-right: 20px;
-        /* Ajuste do espaçamento à direita */
     }
 
     menu ul li a {
@@ -491,23 +336,11 @@ a {
     }
 }
 
-
-
-
-/* EStilo página sobre */
-
-
-
-
-/* Estilos para telas entre 768px e 1024px */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .titulo h3 {
         font-size: 1.4em;
-        /* Tamanho da fonte um pouco maior */
         padding-left: 50px;
-        /* Ajuste do espaçamento à esquerda */
         padding-right: 50px;
-        /* Ajuste do espaçamento à direita */
     }
 }
 
@@ -515,10 +348,7 @@ a {
 @media only screen and (min-width: 1025px) {
     .titulo h3 {
         font-size: 1.5em;
-        /* Tamanho da fonte original */
         padding-left: 350px;
-        /* Mantendo o espaçamento à esquerda */
         padding-right: 350px;
-        /* Mantendo o espaçamento à direita */
     }
 }
