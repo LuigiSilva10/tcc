@@ -20,6 +20,10 @@
     --a: #fff;
 }
 
+html{
+    height: 100%;
+}
+
 
 body {
     background-color: var(--body);
@@ -55,24 +59,30 @@ header {
 
 #dark_mode {
     color: var(--dark_mode);
-    font-size: 1.1em;
+    font-size: 1.9em;
     margin-left: 10px;
 }
 
 #dark_mode:hover {
     cursor: pointer;
+    transform: scale(1.10);
+    transition: 0.25s ease;
 }
 
 
 #light_mode {
     color: var(--light_mode);
     margin-left: 10px;
-    font-size: 1.1em;  
+    height: auto;
+    font-size: 1.9em;
 }
-
+ 
 
 #light_mode:hover {
     cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.10);
+    transition: 0.25s ease;
 }
 
 .light-mode {
@@ -102,6 +112,36 @@ menu {
 }
 
 
+
+
+#font-size-slider {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+
+#close-menu {
+    margin-top: 3px;
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--li);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#close-menu:hover{
+    transform: scale(1.1);
+}
+
+#buttonClicked{
+    width: 0px;
+    height: 0px;
+    margin-bottom: 50px;
+}
+
+
 .menu-suspenso {
     position: fixed;
     top: 0;
@@ -116,18 +156,41 @@ menu {
     box-sizing: border-box;
 }
 
-#font-size-slider {
-    width: 100%;
-    display: block;
-    margin-top: 30px;
+
+.menu-suspenso ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-suspenso li {
+    background-color: var(--menu-suspenso_dark_li_hover);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: var(--li);
+    font-size: 1.1em;
+    display: flex;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 14em
 }
 
 
-
-/* Estilos do menu escuro */
-.dark-mode .menu-suspenso {
-    background-color: var(--header_darkmode);
+.light-mode .menu-suspenso li:hover {
+    background-color: var(--menu-suspenso_light_li_hover);
     color: var(--li);
+}
+
+.light-mode .menu-suspenso li{
+    background-color: #cecaca;
+}
+
+.light-mode label {
+    color: var(--dark_mode);
+}
+
+.menu-suspenso li:hover {
+    transform: scale(1.1);
 }
 
 .dark-mode label {
@@ -138,49 +201,6 @@ menu {
 .light-mode .menu-suspenso {
     background-color: var(--header_lightmode);
     color: var(--li);
-}
-
-
-#close-menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: var(--li);
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.menu-suspenso ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu-suspenso li {
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    color: var(--li);
-    font-size: 1.1em;
-    display: flex;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-
-.light-mode .menu-suspenso li:hover {
-    background-color: var(--menu-suspenso_light_li_hover);
-    color: var(--li);
-}
-
-.light-mode label {
-    color: var(--dark_mode);
-}
-
-.menu-suspenso li:hover {
-    background-color: var(--menu-suspenso_dark_li_hover);
-    transform: scale(1.1);
 }
 
 #logo img {
@@ -210,9 +230,20 @@ a {
     font-weight: bold;
 }
 
+.foto-perfil{
+    display: flex;
+    justify-content: center;
+}
 
+.foto-perfil img{
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 2em;
+    
+    
+}
 
-/*Conteúdo da homepage*/
+/*Escolher tipo de corte*/
 
 .botoes_escolher_tipo_cabelo {
     display: flex;
@@ -233,6 +264,11 @@ a {
     height: 100%;
     object-fit: cover;
     transition: transform 0.40s ease;
+}
+
+
+.light-mode .imagem-container img{
+    filter: opacity(0.9);
 }
 
 .imagem-texto {

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Seleciona os ícones de modo escuro e modo claro
     const darkModeIcon = document.getElementById("dark_mode");
     const lightModeIcon = document.getElementById("light_mode");
+    //botão de acionamento entre os dois temas
     const buttonClicked = document.getElementById("buttonClicked");
 
     temaAtual = "light-mode";
@@ -67,3 +68,9 @@ fontSizeSlider.addEventListener("input", function () {
         pElements[i].style.fontSize = fontSize;
     }
 });
+
+
+
+
+
+
