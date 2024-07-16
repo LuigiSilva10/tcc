@@ -73,4 +73,3 @@ fontSizeSlider.addEventListener("input", function () {
 
 
 
-
