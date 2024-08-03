@@ -1,0 +1,366 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+:root {
+    --header_lightmode: #fff;
+    --header_darkmode: #1e1e1e;
+    --titulo_h2_darkmode: #fbb040;
+    --titulo_h2_lightmode: #333;
+    --titulo_h3_darkmode: #fff;
+    --titulo_h3_lightmode: #1e1e1e;
+    --body: #121212;
+    --config: #ccc;
+    --dark_mode: #999;
+    --light_mode: #fbb040;
+    --li: #fff;
+    --menu-suspenso_dark_li_hover: rgb(45, 44, 44);
+    --menu-suspenso_light_li_hover: rgb(185, 180, 180);
+    --a: #fff;
+}
+
+
+html{
+    height: 100%;
+}
+
+
+body {
+    background-color: var(--body);
+}
+
+header {
+    background-color: var(--header);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.701);
+    margin-bottom: 20px;
+}
+
+.icones_home {
+    font-size: 2em;
+    justify-content: flex-end;
+    display: flex;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+#config {
+    color: var(--config);
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+
+#config:hover {
+    transform: scale(1.2);
+}
+
+
+#dark_mode {
+    color: var(--dark_mode);
+    font-size: 1.9em;
+    margin-left: 10px;
+}
+
+#dark_mode:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: 0.25s ease;
+}
+
+
+#light_mode {
+    color: var(--light_mode);
+    margin-left: 10px;
+    height: auto;
+    font-size: 1.9em;
+}
+
+#light_mode:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+    transform: scale(1.10);
+    transition: 0.25s ease;
+}
+
+.light-mode {
+    --header: var(--header_lightmode);
+    --body: var(--body);
+    --config: var(--config);
+    --dark_mode: var(--dark_mode);
+    --light_mode: var(--light_mode);
+    --li: var(--li);
+    --a: var(--a);
+    --li_hover: var(--li_hover);
+}
+
+.light-mode header a:hover {
+    border-bottom: 2px solid black;
+}
+
+#dark_mode {
+    display: none;
+}
+
+
+menu {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+
+
+
+#font-size-slider {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+}
+
+#close-menu {
+    margin-top: 3px;
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--li);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#close-menu:hover{
+    transform: scale(1.1);
+}
+
+#buttonClicked{
+    width: 0px;
+    height: 0px;
+    margin-bottom: 50px;
+}
+
+
+.menu-suspenso {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--header_darkmode);
+    transition: right 0.6s ease;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.menu-suspenso ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-suspenso li {
+    background-color: var(--menu-suspenso_dark_li_hover);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: var(--li);
+    font-size: 1.1em;
+    display: flex;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 14em
+}
+
+
+.light-mode .menu-suspenso li:hover {
+    background-color: var(--menu-suspenso_light_li_hover);
+    color: var(--li);
+}
+
+.light-mode .menu-suspenso li{
+    background-color: #cecaca;
+}
+
+.light-mode label {
+    color: var(--dark_mode);
+}
+
+.menu-suspenso li:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode label {
+    color: var(--titulo_h2_darkmode);
+
+}
+
+.light-mode .menu-suspenso {
+    background-color: var(--header_lightmode);
+    color: var(--li);
+}
+
+#logo img {
+    margin-left: 5px;
+    margin-top: 5px;
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+li {
+    display: inline-block;
+    margin-right: 30px;
+    color: var(--li);
+    font-size: 1.1em;
+
+}
+
+li:hover {
+    cursor: pointer;
+    border-bottom: var(--li_hover);
+
+}
+
+a {
+    color: var(--a);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Escolher tipo de corte*/
+
+.botoes_escolher_tipo_cabelo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagem-container {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.imagem-container img {
+    width: 100%;
+    filter: opacity(0.6);
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.40s ease;
+}
+
+
+.light-mode .imagem-container img{
+    filter: opacity(0.9);
+}
+
+.imagem-texto {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    transform: translateY(40%);
+    background-color: rgba(0, 0, 0, 0.727);
+    color: white;
+    padding: 20px;
+    font-size: 1.3em;
+}
+
+.imagem-container:hover img {
+    transform: translateY(5px);
+}
+
+/* Estilos dos titulos homepage*/
+.titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo h1 {
+    font-size: 3em;
+    color: var(--a);
+}
+
+.titulo h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: var(--titulo_h2_darkmode);
+}
+
+.dark-mode .titulo h2 {
+    color: var(--titulo_h2_darkmode);
+}
+
+.light-mode .titulo h2 {
+    color: var(--titulo_h2_lightmode);
+}
+
+.imagem-container {
+    position: relative;
+    width: 150%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.dark-mode .titulo p {
+    color: var(--titulo_h3_darkmode);
+}
+
+.light-mode .titulo p {
+    color: var(--titulo_h3_lightmode);
+}
+
+/* Estilos para telas menores que 768px */
+@media only screen and (max-width: 767px) {
+    .titulo h3 {
+        font-size: 1.2em;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    menu ul li a {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .titulo h3 {
+        font-size: 1.4em;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* Estilos para telas maiores que 1024px */
+@media only screen and (min-width: 1025px) {
+    .titulo h3 {
+        font-size: 1.5em;
+        padding-left: 350px;
+        padding-right: 350px;
+    }
+}
+
+
+
+
+

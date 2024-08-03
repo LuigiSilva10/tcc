@@ -20,6 +20,7 @@
     --a: #fff;
 }
 
+
 html{
     height: 100%;
 }
@@ -76,7 +77,6 @@ header {
     height: auto;
     font-size: 1.9em;
 }
- 
 
 #light_mode:hover {
     cursor: pointer;
@@ -230,19 +230,6 @@ a {
     font-weight: bold;
 }
 
-.foto-perfil{
-    display: flex;
-    justify-content: center;
-}
-
-.foto-perfil img{
-    width: 50%;
-    border-radius: 50%;
-    margin-bottom: 2em;
-    
-    
-}
-
 /*Escolher tipo de corte*/
 
 .botoes_escolher_tipo_cabelo {
@@ -288,26 +275,20 @@ a {
     transform: translateY(5px);
 }
 
-/* Estilos da seção "StylishHair" */
+/* Estilos dos titulos homepage*/
 .titulo {
     text-align: center;
-    /* Centraliza o texto */
     margin-bottom: 50px;
-    /* Margem inferior */
 }
 
 .titulo h1 {
     font-size: 3em;
-    /* Tamanho da fonte */
     color: var(--a);
-    /* Cor do texto */
 }
 
 .titulo h2 {
     font-size: 1.5em;
-    /* Tamanho da fonte */
     margin-top: 20px;
-    /* Margem superior */
     color: var(--titulo_h2_darkmode);
 }
 
@@ -340,17 +321,6 @@ a {
     object-fit: cover;
 }
 
-
-/*formatação para pagina sobre*/
-
-.titulo p {
-    font-size: 1.5em;
-    margin-top: 20px;
-    padding-left: 350px;
-    padding-right: 350px;
-    color: var(--titulo_h3_darkmode);
-}
-
 .dark-mode .titulo p {
     color: var(--titulo_h3_darkmode);
 }
@@ -358,6 +328,12 @@ a {
 .light-mode .titulo p {
     color: var(--titulo_h3_lightmode);
 }
+
+
+
+
+
+
 
 
 /* Estilos para telas menores que 768px */
