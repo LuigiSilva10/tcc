@@ -40,11 +40,26 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 500px; 
-    background-color: white; 
+    max-width: 500px;
+    background-color: white;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    border: 5px solid transparent;
+    animation: borderAnimation 2s linear infinite;
+}
+
+/* Animação da borda */
+@keyframes borderAnimation {
+    0% {
+        border-image: linear-gradient(45deg, #fbb040, #1e1e1e) 1;
+    }
+    50% {
+        border-image: linear-gradient(45deg, #1e1e1e, #fbb040) 1;
+    }
+    100% {
+        border-image: linear-gradient(45deg, #fbb040, #1e1e1e) 1;
+    }
 }
 
 /* Estilo do logo */
@@ -95,15 +110,14 @@ main {
 }
 
 .login button:hover {
-    background-color: #1a1a1a;
+    background-color: #1d1d1d;
 }
 
-#buttonDiv{
+#buttonDiv {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-
 
 
 
