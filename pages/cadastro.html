@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://accounts.google.com/gsi/client" async></script>
     <link rel="shortcut icon" href="/image/logos/logo_branca.png" type="image/x-icon">
@@ -14,7 +13,7 @@
 <body>
     <main>
         <div class="card">
-            
+
             <section class="login">
                 <figure id="logo">
                     <img src="/image/logos/logo_preta_nome.png" alt="">
@@ -25,21 +24,23 @@
                 </section>
                 
                 <form action="login.php" method="POST">
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
+
                     <input type="email" id="email" name="email" placeholder="Email" required>
 
                     <input type="password" id="password" name="password" placeholder="Senha" required>
 
-                    <button id="entrar" type="submit">Entrar</button>
+                    <button id="entrar" type="submit">Cadastrar</button>
                     <p>OU</p>
                     <div id="buttonDiv"></div>
 
                     
-                    <p>Não tem uma conta? <a href="/pages/cadastro.html">Cadastre-se</a></p>
+                    <p>Já tem uma conta? <a href="/login.html">Entrar</a></p>
                 </form>
             </section>
             
             <script>
-                
+
                 function handleCredentialResponse(response) {
                     
                 }
@@ -65,7 +66,7 @@
                 }
 
             </script>
-        </div>
+        </div>   
         
         <div vw class="enabled">
             <div vw-access-button class="active"></div>

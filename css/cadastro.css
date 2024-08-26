@@ -1,0 +1,112 @@
+/* Estilos gerais de reset */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(/image/back_login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo do main */
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Centraliza o conteúdo dentro do main */
+    align-items: center; /* Centraliza o conteúdo dentro do main */
+}
+
+/* Estilo do card */
+.card {
+    display: flex;
+    align-items: center;
+    width: 50%; /* Ocupar 50% da largura da tela */
+    max-width: 900px; /* Largura máxima do card */
+    height: 90%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.37);
+}
+
+/* Estilo do título */
+.titulo {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+#logo img {
+    width: 320px; /* Ajusta o tamanho do logo conforme necessário */
+    margin-bottom: 20px;
+    border-radius: 20%;
+}
+
+/* Estilo do formulário de login */
+.login {
+    background: #fff; /* Fundo do formulário */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px; /* Tamanho da fonte ajustado para melhor usabilidade */
+}
+
+/* Estilo do botão de envio */
+.login button {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adiciona transição suave na mudança de cor */
+}
+
+.login button:hover {
+    background-color: #1d1d1d;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .card {
+        width: 100%; /* Ocupa toda a largura da tela */
+        margin: 0;
+    }
+}
