@@ -21,6 +21,8 @@
 }
 
 
+
+
 html{
     height: 100%;
 }
@@ -255,6 +257,7 @@ menu {
 
 #logo img {
     max-width: 30%;
+    transition: 0.5s ease;
 }
 
 li {

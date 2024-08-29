@@ -5,42 +5,42 @@ document.addEventListener("DOMContentLoaded", function () {
     //botão de acionamento entre os dois temas
     const buttonClicked = document.getElementById("buttonClicked");
 
-    temaAtual = "light-mode";
+    // Elementos do logo
+    const logoImg = document.getElementById('logo-img');
+    const lightModeLogo = '/image/logos/logo_preta.png';
+    const darkModeLogo = '/image/logos/logo_branca.png';
+
+    // Define o tema como dark-mode ao carregar a página
+    let temaAtual = localStorage.getItem('tema') || 'dark-mode';
+    document.body.classList.add('dark-mode');
+    logoImg.src = darkModeLogo;
+    darkModeIcon.style.display = "none";
+    lightModeIcon.style.display = "block";
+
+    // Alterna entre temas ao clicar no botão
     buttonClicked.addEventListener("click", function () {
-        //alternar entre os temas
-        if (temaAtual == "light-mode") {
-            //ativar o modo escuro
+        if (temaAtual === "light-mode") {
             document.body.classList.remove("light-mode");
             document.body.classList.add("dark-mode");
+            logoImg.src = darkModeLogo;
             temaAtual = "dark-mode";
+            darkModeIcon.style.display = "none";
+            lightModeIcon.style.display = "block";
 
         } else {
             document.body.classList.remove("dark-mode");
             document.body.classList.add("light-mode");
+            logoImg.src = lightModeLogo;
             temaAtual = "light-mode";
-        }
-
-        // Adiciona um ouvinte de evento de clique ao botão de tema
-        buttonClicked.addEventListener("click", function () {
-            alternarTema();
-        });
-
-        // Chama a função para definir o ícone inicial com base no tema atual
-        if (temaAtual === "light-mode") {
             darkModeIcon.style.display = "block";
             lightModeIcon.style.display = "none";
-        } else {
-            lightModeIcon.style.display = "block";
-            darkModeIcon.style.display = "none";
         }
+
+        // Salva o tema no localStorage para que comece sempre no darkMode
+        localStorage.setItem('tema', temaAtual);
     });
 
-
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Código para abrir e fechar o menu suspenso
     const configIcon = document.getElementById("config");
     const menuSuspenso = document.getElementById("menu-suspenso");
     const closeMenuBtn = document.getElementById("close-menu");
@@ -57,14 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const menuVisible = menuSuspenso.style.right === "0px";
         menuSuspenso.style.right = menuVisible ? "-300px" : "0px";
     }
-});
 
-const fontSizeSlider = document.getElementById("font-size-slider");
-const pElements = document.getElementsByTagName("p");
+    // Controle do tamanho da fonte dos elementos <p>
+    const fontSizeSlider = document.getElementById("font-size-slider");
+    const pElements = document.getElementsByTagName("p");
 
-fontSizeSlider.addEventListener("input", function () {
-    const fontSize = fontSizeSlider.value + "px";
-    for (let i = 0; i < pElements.length; i++) {
-        pElements[i].style.fontSize = fontSize;
-    }
+    fontSizeSlider.addEventListener("input", function () {
+        const fontSize = fontSizeSlider.value + "px";
+        for (let i = 0; i < pElements.length; i++) {
+            pElements[i].style.fontSize = fontSize;
+        }
+    });
 });
