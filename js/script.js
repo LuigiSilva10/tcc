@@ -68,8 +68,3 @@ fontSizeSlider.addEventListener("input", function () {
         pElements[i].style.fontSize = fontSize;
     }
 });
-
-
-
-
-
