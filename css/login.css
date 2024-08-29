@@ -12,8 +12,6 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 100vh;
-    margin: 0;
-    padding: 0;
     background-image: url(/image/back_login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,10 +31,11 @@ main {
 .card {
     display: flex;
     align-items: center;
-    width: 50%; /* Ocupar 50% da largura da tela */
-    max-width: 900px; /* Largura máxima do card */
+    width: 40%; /* Ocupar 40% da largura da tela */
+    max-width: 100%; /* Largura máxima do card */
+    max-height: 100%;/*Altura máxima do card*/
     height: 90%;
-    padding: 20px;
+    padding: 3%;
     text-align: center;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(4px);
@@ -48,30 +47,29 @@ main {
 /*Estilo do titulo*/
 .titulo{
     font-size: 1.3em;
-    margin-bottom: 20px;
+    margin-bottom: 5%;
 }
 
 /* Estilo do logo */
 #logo img {
-    width: 320px; /* Ajusta o tamanho do logo conforme necessário */
-    margin-bottom: 20px;
-    border-radius: 20%;
+    width: 60%; /* Ajusta o tamanho do logo conforme necessário */
+    margin-bottom: 2%;
 }
 
 /* Estilo do formulário de login */
 .login {
-    background: #fff; /* Fundo do formulário */
+    background: #ffffff; /* Fundo do formulário */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 600px; /* Largura máxima do formulário */
+    padding: 8%;
+    width: 90%;
+    max-width: 100%; /* Largura máxima do formulário */
     margin: 0 auto; /* Centraliza o formulário */
 }
 
 .login input {
     width: 100%;
-    padding: 10px;
+    padding: 3%;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -80,9 +78,9 @@ main {
 
 /* Estilo do botão de envio */
 .login button {
-    margin-bottom: 20px;
+    margin-bottom: 7%;
     width: 100%;
-    padding: 10px;
+    padding: 2%;
     background-color: #333;
     border: none;
     border-radius: 4px;
@@ -99,15 +97,38 @@ main {
 #buttonDiv {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/* Estilo do input-group */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding-right: 40%; /* Adiciona espaço para o ícone */
+}
+
+/* Estilo do ícone de ver senha */
+.input-group i {
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333; /* Cor do ícone */
 }
 
 
-/* Responsividade para telas menores */
-@media (max-width: 1200px) {
-    
+/* Responsividade para dispositivos móveis */
+@media (max-width: 700px) {
     .card {
-        width: 100%; /* Ocupa toda a largura da tela */
+        max-width: 100%;
+        max-height: 100%;
+        width: 80%;
+        height: 74%;
     }
+
 }

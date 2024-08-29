@@ -69,3 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+/*Botão para revelar a senha*/
+const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // Alterna o tipo de input entre 'password' e 'text'
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+
+        // Alterna o ícone entre o olho aberto e fechado
+        this.classList.toggle('bi-eye');
+        this.classList.toggle('bi-eye-slash');
+    });
