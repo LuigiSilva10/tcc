@@ -27,6 +27,7 @@ html{
 
 
 body {
+    margin: 0;
     background-color: var(--body);
 }
 
@@ -36,11 +37,63 @@ header {
 }
 
 .icones_home {
-    font-size: 2em;
-    justify-content: flex-end;
+    font-size: 2.5em;
+    justify-content: space-between;
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 5px;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.search-box {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-box input {
+    width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: width 0.4s ease, padding 0.4s ease;
+}
+
+.search-box .search-btn {
+    background-color: var(--config);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box:hover input, .search-box input:focus {
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box:hover .search-btn, .search-box input:focus + .search-btn {
+    background-color: black;
+}
+
+.search-box input::placeholder {
+    color: #2b2b2b91;
+    transition: color 0.4s ease;
+}
+
+.search-box input:focus::placeholder {
+    color: transparent;
 }
 
 
@@ -50,7 +103,6 @@ header {
     margin-top: 40px;
     transition: 0.6s;
 }
-
 
 #config:hover {
     transform: scale(0.9);
@@ -95,9 +147,12 @@ header {
     --li_hover: var(--li_hover);
 }
 
-.light-mode header a:hover {
-    border-bottom: 2px solid black;
+
+.light-mode .search-box .search-btn{
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
+
 
 #dark_mode {
     display: none;
@@ -108,7 +163,6 @@ menu {
     display: flex;
     justify-content: space-between;
 }
-
 
 #font-size-slider {
     width: 100%;
