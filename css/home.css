@@ -47,7 +47,7 @@ header {
 #config {
     color: var(--config);
     margin-right: 120%;
-    margin-top: 75%;
+    margin-top: 130%;
     transition: 0.2s;
 }
 
@@ -102,12 +102,11 @@ header {
 
 menu {
     display: flex;
-    padding: 1%;
     justify-content: space-between;
 }
 
 #font-size-slider {
-    width: 100%;
+    width: 10%;
     display: block;
     margin-top: 30px;
 }
@@ -164,7 +163,7 @@ menu {
     font-size: 1.1em;
     display: flex;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 14em
+    width: 14em;
 }
 
 
@@ -198,7 +197,7 @@ menu {
 #logo img {
     margin-left: 5px;
     margin-top: 5px;
-    max-width: 15%;
+    max-width: 25%;
     border-radius: 50%;
 }
 
@@ -222,58 +221,10 @@ a {
     font-weight: bold;
 }
 
-/*Escolher tipo de corte*/
-
-.botoes_escolher_tipo_cabelo {
-    display: flex;
-    justify-content: space-around;
-}
-
-.imagem-container {
-    position: relative;
-    margin: 0.7%;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-}
-
-.imagem-container img {
-    width: 100%;
-    filter: opacity(0.6);
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.40s ease;
-}
-
-
-.light-mode .imagem-container img{
-    filter: opacity(0.9);
-}
-
-.imagem-texto {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    right: 0;
-    transform: translateY(40%);
-    background-color: rgba(0, 0, 0, 0.727);
-    color: white;
-    padding: 10%;
-}
-
-.imagem-texto p {
-    font-weight: bold;
-    font-size: 1.3em;
-}
-
-.imagem-container:hover img {
-    transform: translateY(5px);
-}
-
 /* Estilos dos titulos homepage*/
 .titulo {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 3%;
 }
 
 .titulo h1 {
@@ -283,7 +234,7 @@ a {
 
 .titulo h2 {
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 1%;
     color: var(--titulo_h2_darkmode);
 }
 
@@ -295,28 +246,6 @@ a {
     color: var(--titulo_h2_lightmode);
 }
 
-.imagem-container {
-    position: relative;
-    width: 150%;
-    height: 400px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-}
-
-.image-container:hover {
-    transform: translateY(-5px);
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
 .dark-mode .titulo p {
     color: var(--titulo_h3_darkmode);
 }
@@ -324,6 +253,90 @@ a {
 .light-mode .titulo p {
     color: var(--titulo_h3_lightmode);
 }
+
+.dark-mode .botoes_escolher_tipo_cabelo p {
+    color: var(--titulo_h3_darkmode);
+}
+
+.light-mode .botoes_escolher_tipo_cabelo p {
+    color: var(--titulo_h3_darkmode);
+}
+
+.botoes_escolher_tipo_cabelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12%; /* Espaço entre as imagens */
+}
+
+.imagem-container {
+    position: relative;
+    width: 25%;
+    height: 500px; /* Define uma altura fixa */
+    transition: 0.3s;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isso garante que a imagem cubra toda a área da div sem distorção */
+    border-radius: 10px; /* Adicione bordas arredondadas, se necessário */
+}
+
+.imagem-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px; /* Se as imagens tiverem bordas arredondadas, aplique isso também */
+}
+
+.imagem-container:hover{
+    transform: scale(0.98);
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: var(--header);
+    padding: 5%;
+    color: var(--li);
+    align-items: center;
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.701);
+    margin-top: 2%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+}
+
+.footer-left h3 {
+    font-size: 5em;
+    margin: 0;
+    color: var(--li);
+}
+
+
+.footer-right ul {
+    font-size: 0.9em;
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se o espaço não for suficiente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* Estilos para telas menores que 768px */
 @media only screen and (max-width: 767px) {
