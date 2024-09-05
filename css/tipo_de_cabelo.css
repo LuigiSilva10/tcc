@@ -41,20 +41,19 @@ header {
     justify-content: flex-end;
     display: flex;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 
 #config {
     color: var(--config);
-    margin-right: 20px;
-    margin-top: 20px;
-
+    margin-right: 120%;
+    margin-top: 130%;
+    transition: 0.2s;
 }
 
 
 #config:hover {
-    transform: scale(1.2);
+    transform: scale(0.9);
 }
 
 
@@ -204,9 +203,7 @@ menu {
 }
 
 #logo img {
-    margin-left: 5px;
-    margin-top: 5px;
-    max-width: 15%;
+    max-width: 20%;
     border-radius: 50%;
 }
 

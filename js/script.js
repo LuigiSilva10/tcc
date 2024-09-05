@@ -83,3 +83,31 @@ const togglePassword = document.querySelector('#togglePassword');
         this.classList.toggle('bi-eye');
         this.classList.toggle('bi-eye-slash');
     });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const profilePics = document.querySelectorAll('.profile-pic');  // Seleciona todas as fotos da galeria
+        const selectedProfilePic = document.getElementById('selected-profile-pic');  // Foto de perfil selecionada
+        const logoImg = document.getElementById('logo-img');  // Logo do site
+    
+        // Verifica se há uma foto salva no localStorage
+        const savedPic = localStorage.getItem('selectedProfilePic');
+    
+        // Se houver uma foto salva no localStorage, altera a imagem "default" para a foto salva
+        if (savedPic && savedPic !== "/image/logos/logo_branca.png") {
+            selectedProfilePic.src = savedPic;  // Atualiza a exibição da foto de perfil com a foto salva
+            logoImg.src = savedPic;  // Atualiza a logo com a mesma imagem
+        }
+    
+        // Adiciona evento de clique para selecionar a foto de perfil
+        profilePics.forEach(pic => {
+            pic.addEventListener('click', () => {
+                const selectedPicSrc = pic.getAttribute('src');  // Obtém o caminho da imagem clicada
+                selectedProfilePic.src = selectedPicSrc;  // Atualiza a foto exibida em #selected-profile-pic
+                logoImg.src = selectedPicSrc;  // Atualiza a logo com a nova imagem
+                localStorage.setItem('selectedProfilePic', selectedPicSrc);  // Armazena a foto selecionada no localStorage
+            });
+        });
+    });
+    
