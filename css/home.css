@@ -229,10 +229,13 @@ a {
     font-size: 2.6em;
     box-shadow: none;
     text-align: center;
-    margin-top: 50%;
+    margin-top: 30%;
     
 }
 
+.light-mode #footer-menu-suspenso{
+    color: black;
+}
 
 #user-profile {
     text-align: center;
@@ -258,10 +261,6 @@ a {
 .dark-mode #nome_usuario_menu_suspenso{
     font-weight: bold;
     color: var(--menu-suspenso_light_li_hover);
-}
-
-.light-mode #nome_usuario_menu_suspenso{
-    color:var(--menu-suspenso_dark_li_hover);
 }
 
 
@@ -316,7 +315,7 @@ a {
 .imagem-container {
     position: relative;
     width: 25%;
-    height: 500px; /* Define uma altura fixa */
+    height: 30vmax;
     transition: 0.3s;
 }
 
@@ -408,13 +407,17 @@ footer {
 /* Estilos para telas menores que 768px */
 @media only screen and (max-width: 767px) {
     .titulo h3 {
-        font-size: 1.2em;
+        font-size: 0.5em;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     menu ul li a {
         display: none;
+    }
+
+    .imagem-texto{
+        font-size: 1em;
     }
 }
 
