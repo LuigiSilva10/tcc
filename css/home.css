@@ -239,6 +239,8 @@ a {
 
 #user-profile {
     text-align: center;
+    margin-top: 50px;
+    
 }
 
 #selected-profile {
@@ -258,7 +260,15 @@ a {
     
 }
 
+#nome_usuario_menu_suspenso{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+
 .dark-mode #nome_usuario_menu_suspenso{
+    
     font-weight: bold;
     color: var(--menu-suspenso_light_li_hover);
 }

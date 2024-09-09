@@ -374,6 +374,42 @@ a {
     color: var(--titulo_h3_lightmode);
 }
 
+#botao_tipo_de_cabelo{
+ max-width: max-content;
+ margin: 1%;
+ background-color: var(--light_mode);
+ border: none;
+ border-radius: 8px;
+ padding: 20px;
+}
+
+#botao_tipo_de_cabelo:hover{
+    cursor: pointer;
+    transform: scale(1.02);;
+    transition: 0.50s ease;
+}
+
+#botao_tipo_de_cabelo h2{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+#texto_tipo_de_cabelo{
+    margin: 0;
+}
+
+
+.light-mode #botao_tipo_de_cabelo{
+    background-color: rgba(0, 0, 0, 0.727);
+    
+}
+
+.light-mode #botao_tipo_de_cabelo h2{
+    color: white;
+}
+
 /* Estilos para telas menores que 768px */
 @media only screen and (max-width: 767px) {
     .titulo h3 {
