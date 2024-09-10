@@ -20,11 +20,9 @@
     --a: #fff;
 }
 
-
-html{
+html {
     height: 100%;
 }
-
 
 body {
     background-color: var(--body);
@@ -43,7 +41,6 @@ header {
     cursor: pointer;
 }
 
-
 #config {
     color: var(--config);
     margin-right: 120%;
@@ -51,11 +48,9 @@ header {
     transition: 0.2s;
 }
 
-
 #config:hover {
     transform: scale(0.9);
 }
-
 
 #dark_mode {
     color: var(--dark_mode);
@@ -68,7 +63,6 @@ header {
     transform: scale(1.10);
     transition: 0.25s ease;
 }
-
 
 #light_mode {
     color: var(--light_mode);
@@ -103,15 +97,11 @@ header {
     display: none;
 }
 
-
 menu {
     display: flex;
     padding: 5px;
     justify-content: space-between;
 }
-
-
-
 
 #font-size-slider {
     width: 100%;
@@ -130,16 +120,15 @@ menu {
     cursor: pointer;
 }
 
-#close-menu:hover{
+#close-menu:hover {
     transform: scale(1.1);
 }
 
-#buttonClicked{
+#buttonClicked {
     width: 0px;
     height: 0px;
     margin-bottom: 50px;
 }
-
 
 .menu-suspenso {
     position: fixed;
@@ -154,7 +143,6 @@ menu {
     padding: 20px;
     box-sizing: border-box;
 }
-
 
 .menu-suspenso ul {
     list-style: none;
@@ -175,36 +163,32 @@ menu {
     width: 14em;
 }
 
-
-#footer-menu-suspenso{
+#footer-menu-suspenso {
     font-weight: bold;
     font-size: 2.6em;
     box-shadow: none;
     text-align: center;
     margin-top: 30%;
-    
 }
 
-.dark-mode #footer-menu-suspenso{
+.dark-mode #footer-menu-suspenso {
     color: white;
 }
-
 
 #user-profile {
     text-align: center;
 }
-
 
 .light-mode .menu-suspenso li:hover {
     background-color: var(--menu-suspenso_light_li_hover);
     color: var(--li);
 }
 
-.light-mode #nome_usuario_menu_suspenso{
-    color:var(--menu-suspenso_dark_li_hover);
+.light-mode #nome_usuario_menu_suspenso {
+    color: var(--menu-suspenso_dark_li_hover);
 }
 
-.light-mode .menu-suspenso li{
+.light-mode .menu-suspenso li {
     background-color: #cecaca;
 }
 
@@ -218,7 +202,6 @@ menu {
 
 .dark-mode label {
     color: var(--titulo_h2_darkmode);
-
 }
 
 .dark-mode #nome_usuario_menu_suspenso {
@@ -241,13 +224,11 @@ li {
     margin-right: 30px;
     color: var(--li);
     font-size: 1.1em;
-
 }
 
 li:hover {
     cursor: pointer;
     border-bottom: var(--li_hover);
-
 }
 
 a {
@@ -256,52 +237,58 @@ a {
     font-weight: bold;
 }
 
-/*Escolher tipo de corte*/
-
+/* Escolher tipo de corte */
 .botoes_escolher_tipo_cabelo {
     display: flex;
     justify-content: space-around;
 }
 
 .imagem-container {
-    position: relative;
+    width: 100%;
+    max-width: 25%; /* Largura máxima para telas maiores */
+    height: 30vmax; /* Altura baseada na viewport height */
     margin: 10px;
+    position: relative;
     overflow: hidden;
     text-align: center;
-    position: relative;
+    transition: transform 0.3s ease;
 }
 
 .imagem-container img {
     width: 100%;
-    filter: opacity(0.6);
     height: 100%;
     object-fit: cover;
     transition: transform 0.40s ease;
 }
 
-
-.light-mode .imagem-container img{
+.light-mode .imagem-container img {
     filter: opacity(0.9);
 }
 
 .imagem-texto {
     position: absolute;
-    top: 80%;
+    bottom: 0;
     left: 0;
     right: 0;
-    font-weight: bold;
-    transform: translateY(40%);
-    background-color: rgba(0, 0, 0, 0.727);
+    background-color: rgba(0, 0, 0, 0.897);
     color: white;
-    padding: 20px;
-    font-size: 1.3em;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.imagem-container:hover .imagem-texto {
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 }
 
 .imagem-container:hover img {
     transform: translateY(5px);
 }
 
-/* Estilos dos titulos homepage*/
+/* Estilos dos titulos homepage */
 .titulo {
     text-align: center;
     margin-bottom: 50px;
@@ -326,7 +313,6 @@ a {
     color: var(--titulo_h2_lightmode);
 }
 
-
 #selected-profile {
     width: 8em;
     height: auto;
@@ -341,30 +327,7 @@ a {
 #selected-profile-pic {
     width: 100%;
     object-fit: cover;
-    
 }
-
-.imagem-container {
-    position: relative;
-    width: 150%;
-    height: 400px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-
-}
-
-.image-container:hover {
-    transform: translateY(-5px);
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .dark-mode .titulo p {
     color: var(--titulo_h3_darkmode);
@@ -374,73 +337,56 @@ a {
     color: var(--titulo_h3_lightmode);
 }
 
-#botao_tipo_de_cabelo{
- max-width: max-content;
- margin: 1%;
- background-color: var(--light_mode);
- border: none;
- border-radius: 8px;
- padding: 20px;
+#botao_tipo_de_cabelo {
+    max-width: max-content;
+    margin: 1%;
+    background-color: var(--light_mode);
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
 }
 
-#botao_tipo_de_cabelo:hover{
+#botao_tipo_de_cabelo:hover {
     cursor: pointer;
-    transform: scale(1.02);;
+    transform: scale(1.02);
     transition: 0.50s ease;
 }
 
-#botao_tipo_de_cabelo h2{
+#botao_tipo_de_cabelo h2 {
     color: black;
     font-size: 1.5rem;
     font-weight: bold;
-
 }
 
-#texto_tipo_de_cabelo{
+#texto_tipo_de_cabelo {
     margin: 0;
 }
 
-
-.light-mode #botao_tipo_de_cabelo{
+.light-mode #botao_tipo_de_cabelo {
     background-color: rgba(0, 0, 0, 0.727);
-    
 }
 
-.light-mode #botao_tipo_de_cabelo h2{
+.light-mode #botao_tipo_de_cabelo h2 {
     color: white;
 }
 
-/* Estilos para telas menores que 768px */
-@media only screen and (max-width: 767px) {
-    .titulo h3 {
-        font-size: 1.2em;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
-    menu ul li a {
-        display: none;
+@media only screen and (max-width: 768px) {
+    .imagem-container {
+        max-width: 100%; 
+        height: 200px; 
     }
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .titulo h3 {
-        font-size: 1.4em;
-        padding-left: 50px;
-        padding-right: 50px;
+    .imagem-container {
+        max-width: 50%; 
     }
 }
 
-/* Estilos para telas maiores que 1024px */
-@media only screen and (min-width: 1025px) {
-    .titulo h3 {
-        font-size: 1.5em;
-        padding-left: 350px;
-        padding-right: 350px;
+@media only screen and (min-width: 1024px) {
+    .imagem-container {
+        max-width: 25%; 
     }
 }
-
-
-
-
-
