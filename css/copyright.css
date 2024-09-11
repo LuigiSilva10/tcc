@@ -34,7 +34,6 @@ body {
 header {
     background-color: var(--header);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.701);
-    margin-bottom: 4%;
 }
 
 .icones_home {
@@ -263,99 +262,58 @@ a {
 #nome_usuario_menu_suspenso{
     margin-top: 15px;
     margin-bottom: 15px;
-
 }
 
 
 .dark-mode #nome_usuario_menu_suspenso{
-    
     font-weight: bold;
     color: var(--menu-suspenso_light_li_hover);
 }
 
-
-/* Estilos dos titulos homepage*/
-.titulo {
+main {
     text-align: center;
-    margin-bottom: 3%;
 }
 
-.titulo h1 {
+.copyright {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
     font-size: 3em;
     color: var(--a);
 }
 
-.titulo h2 {
-    font-size: 1.5em;
+h2 {
+    font-size: 3em;
     margin-top: 1%;
     color: var(--titulo_h2_darkmode);
 }
 
-.dark-mode .titulo h2 {
+p {
+    margin-top: 5%;
+    font-size: 1.2em;
+}
+
+.dark-mode h2 {
     color: var(--titulo_h2_darkmode);
 }
 
-.light-mode .titulo h2 {
+.light-mode h2 {
     color: var(--titulo_h2_lightmode);
 }
 
-.dark-mode .titulo p {
+.dark-mode p {
     color: var(--titulo_h3_darkmode);
 }
 
-.light-mode .titulo p {
+.light-mode p {
     color: var(--titulo_h3_lightmode);
 }
 
-.dark-mode .botoes_escolher_tipo_cabelo p {
-    color: var(--titulo_h3_darkmode);
+#logo_copy img {
+    width: 250px;
 }
-
-.light-mode .botoes_escolher_tipo_cabelo p {
-    color: var(--titulo_h3_darkmode);
-}
-
-.botoes_escolher_tipo_cabelo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12%; /* Espaço entre as imagens */
-}
-
-.imagem-container {
-    position: relative;
-    width: 25%;
-    height: 30vmax;
-    transition: 0.3s;
-}
-
-.imagem-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Isso garante que a imagem cubra toda a área da div sem distorção */
-    border-radius: 10px; /* Adicione bordas arredondadas, se necessário */
-}
-
-.imagem-texto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade */
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 10px; /* Se as imagens tiverem bordas arredondadas, aplique isso também */
-}
-
-.imagem-container:hover{
-    transform: scale(0.98);
-}
-
 /* Estilos para o rodapé */
 footer {
     margin-top: 10%;
@@ -438,4 +396,3 @@ footer {
         padding-right: 50px;
     }
 }
-
