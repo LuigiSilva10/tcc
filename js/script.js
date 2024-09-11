@@ -110,4 +110,14 @@ const togglePassword = document.querySelector('#togglePassword');
             });
         });
     });
+
+
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+
+    
+    
+        
+    
+    
     

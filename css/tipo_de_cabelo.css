@@ -337,28 +337,22 @@ a {
     color: var(--titulo_h3_lightmode);
 }
 
-#botao_tipo_de_cabelo {
-    max-width: max-content;
-    margin: 1%;
-    background-color: var(--light_mode);
-    border: none;
-    border-radius: 8px;
+#tipo_de_cabelo {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
     padding: 20px;
 }
 
-#botao_tipo_de_cabelo:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-    transition: 0.50s ease;
-}
-
-#botao_tipo_de_cabelo h2 {
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
+#tipo_de_cabelo img {
+    max-width: 80vh;
+    height: auto; 
+    border-radius: 50px;
 }
 
 #texto_tipo_de_cabelo {
+    color: var(--light_mode);
     margin: 0;
 }
 
@@ -369,6 +363,8 @@ a {
 .light-mode #botao_tipo_de_cabelo h2 {
     color: white;
 }
+
+
 
 
 @media only screen and (max-width: 768px) {
