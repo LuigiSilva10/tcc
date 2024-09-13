@@ -206,7 +206,7 @@ menu {
 
 .dark-mode #nome_usuario_menu_suspenso {
     font-weight: bold;
-    color: var(--menu-suspenso_light_li_hover);
+    color: white;
 }
 
 .light-mode .menu-suspenso {
