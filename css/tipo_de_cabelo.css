@@ -364,8 +364,63 @@ a {
     color: white;
 }
 
+/* Estilos para o rodapé */
+footer {
+    margin-top: 10%;
+    background-color: var(--header);
+    color: var(--a);
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.701);
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.footer-column {
+    flex-basis: 30%;
+}
+
+.footer-column h3 {
+    margin-left: 10px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--a);
+    font-weight: normal;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--a);
+    font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+    color: #cccccc;
+}
 
 @media only screen and (max-width: 768px) {
     .imagem-container {
