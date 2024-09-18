@@ -242,25 +242,34 @@ a {
     
 }
 
+/* Estilizando o ícone do perfil selecionado */
 #selected-profile {
-    width: 8em;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
 
-#selected-profile-pic {
-    width: 100%;
-    object-fit: cover;
-    
+#selected-profile i {
+    font-size: 5vw;
+    color: black;
 }
+
+.dark-mode #selected-profile i{
+    color: white;
+}
+
+
+.dark-mode #nome_usuario_menu_suspenso{
+    font-weight: bold;
+    color: white;
+}
+
 
 #nome_usuario_menu_suspenso{
     margin-top: 15px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
@@ -286,7 +295,7 @@ h1 {
 
 h2 {
     font-size: 3em;
-    margin-top: 1%;
+    margin-top: 10%;
     color: var(--titulo_h2_darkmode);
 }
 
