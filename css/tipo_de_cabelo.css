@@ -246,8 +246,8 @@ a {
 .imagem-container {
     width: 100%;
     max-width: 25%; /* Largura máxima para telas maiores */
-    height: 30vmax; /* Altura baseada na viewport height */
-    margin: 10px;
+    height: 26vmax; /* Altura baseada na viewport height */
+    margin: 30px;
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -270,22 +270,26 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.897);
-    color: white;
+    text-align: center;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.797);
+    color: white;
     font-size: 1.2em;
     font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    transition: 0.4s ease-in-out;
 }
 
 .imagem-container:hover .imagem-texto {
-    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
 
 .imagem-container:hover img {
-    transform: translateY(5px);
+    transform: translateY(10px);
 }
 
 /* Estilos dos titulos homepage */
