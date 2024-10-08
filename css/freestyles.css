@@ -237,42 +237,6 @@ a {
     color: black;
 }
 
-#user-profile {
-    text-align: center;
-    margin-top: 50px;
-    
-}
-
-/* Estilizando o ícone do perfil selecionado */
-#selected-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-#selected-profile i {
-    font-size: 5vw;
-    color: black;
-}
-
-.dark-mode #selected-profile i{
-    color: white;
-}
-
-
-#nome_usuario_menu_suspenso{
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-}
-
-
-.dark-mode #nome_usuario_menu_suspenso{
-    font-weight: bold;
-    color: white;
-}
 
 
 /* Estilos dos titulos homepage*/

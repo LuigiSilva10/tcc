@@ -233,6 +233,13 @@ a {
     
 }
 
+#foto_perfil {
+    width: 9em; 
+    height: 9em; 
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
 .light-mode #footer-menu-suspenso{
     color: black;
 }
@@ -243,19 +250,12 @@ a {
     
 }
 
-/* Estilizando o ícone do perfil selecionado */
 #selected-profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
 }
 
-#selected-profile i {
-    font-size: 5vw;
-    color: black;
-}
 
 .dark-mode #selected-profile i{
     color: white;
