@@ -234,8 +234,8 @@ a {
 }
 
 #foto_perfil {
-    width: 9em; 
-    height: 9em; 
+    width: 15em; 
+    height: 20em; 
     border-radius: 50%;
     overflow: hidden; 
 }
