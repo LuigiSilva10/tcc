@@ -237,6 +237,52 @@ a {
     font-weight: bold;
 }
 
+.tipo_de_cabelo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tipo_de_cabelo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tipo_de_cabelo td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tipo_de_cabelo .tipo-cabelo {
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tipo_de_cabelo .tipo-header {
+    background-color: var(--body);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    color: var(--a);
+}
+
+.tipo_de_cabelo .tipo-descricao {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tipo_de_cabelo .linha {
+    background-color: var(--body);
+}
+
+.tipo_de_cabelo .linha:nth-child(odd) {
+    background-color: var(--body);
+}
+
 /* Escolher tipo de corte */
 .botoes_escolher_tipo_cabelo {
     display: flex;
