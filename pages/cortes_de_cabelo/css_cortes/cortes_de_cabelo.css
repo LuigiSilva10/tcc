@@ -175,10 +175,6 @@ menu {
     color: white;
 }
 
-#user-profile {
-    text-align: center;
-}
-
 .light-mode .menu-suspenso li:hover {
     background-color: var(--menu-suspenso_light_li_hover);
     color: var(--li);
@@ -237,7 +233,7 @@ a {
     font-weight: bold;
 }
 
-/* Escolher tipo de corte */
+
 .botoes_escolher_tipo_cabelo {
     display: flex;
     justify-content: space-around;
@@ -245,8 +241,8 @@ a {
 
 .imagem-container {
     width: 100%;
-    max-width: 25%; /* Largura máxima para telas maiores */
-    height: 26vmax; /* Altura baseada na viewport height */
+    max-width: 25%; 
+    height: 26vmax; 
     margin: 30px;
     position: relative;
     overflow: hidden;
@@ -257,6 +253,7 @@ a {
 .imagem-container img {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     object-fit: cover;
     transition: transform 0.40s ease;
 }
@@ -265,34 +262,11 @@ a {
     filter: opacity(0.9);
 }
 
-.imagem-texto {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.797);
-    color: white;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-}
-
-.imagem-container:hover .imagem-texto {
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-}
-
 .imagem-container:hover img {
-    transform: scale(0.9);
+    transform: scale(1.09);
+
 }
 
-/* Estilos dos titulos homepage */
 .titulo {
     text-align: center;
     margin-bottom: 50px;
@@ -315,22 +289,6 @@ a {
 
 .light-mode .titulo h2 {
     color: var(--titulo_h2_lightmode);
-}
-
-#selected-profile {
-    width: 8em;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#selected-profile-pic {
-    width: 100%;
-    object-fit: cover;
 }
 
 .dark-mode .titulo p {
@@ -368,7 +326,7 @@ a {
     color: white;
 }
 
-/* Estilos para o rodapé */
+
 footer {
     margin-top: 10%;
     background-color: var(--header);
