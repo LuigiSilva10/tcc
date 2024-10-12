@@ -175,6 +175,13 @@ menu {
     color: white;
 }
 
+#foto_perfil {
+    width: 15em; 
+    height: 20em; 
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
 #user-profile {
     text-align: center;
 }
@@ -184,9 +191,7 @@ menu {
     color: var(--li);
 }
 
-.light-mode #nome_usuario_menu_suspenso {
-    color: var(--menu-suspenso_dark_li_hover);
-}
+
 
 .light-mode .menu-suspenso li {
     background-color: #cecaca;
@@ -363,16 +368,6 @@ a {
     color: var(--titulo_h2_lightmode);
 }
 
-#selected-profile {
-    width: 8em;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
 
 #selected-profile-pic {
     width: 100%;

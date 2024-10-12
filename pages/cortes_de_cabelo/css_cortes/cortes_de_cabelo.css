@@ -130,6 +130,40 @@ menu {
     margin-bottom: 50px;
 }
 
+#foto_perfil {
+    width: 15em; 
+    height: 20em; 
+    border-radius: 50%;
+    overflow: hidden; 
+} 
+
+
+
+#nome_usuario_menu_suspenso {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+#selected-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#user-profile {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#nome_usuario_menu_suspenso{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .menu-suspenso {
     position: fixed;
     top: 0;
@@ -148,6 +182,8 @@ menu {
     list-style: none;
     padding: 0;
 }
+
+
 
 .menu-suspenso li {
     background-color: var(--menu-suspenso_dark_li_hover);
@@ -180,9 +216,7 @@ menu {
     color: var(--li);
 }
 
-.light-mode #nome_usuario_menu_suspenso {
-    color: var(--menu-suspenso_dark_li_hover);
-}
+
 
 .light-mode .menu-suspenso li {
     background-color: #cecaca;
